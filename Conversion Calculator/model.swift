@@ -11,13 +11,23 @@ import Foundation
 
 class Conversions {
     
-    func ftoC(tempInF:Double) -> Double {
+    func fToC(tempInF:Double) -> Double {
         let celsius = (tempInF - 32.0) * (5.0/9.0)
         return celsius as Double
     }
     
+    func cToF(tempInC:Double) ->Double {
+        let fahrenheit = (tempInC * 9.0/5.0) + 32.0
+        return fahrenheit as Double
+    }
+    
     func milestoKilometers(speedInMPH:Double) -> Double {
         let speedInKPH = speedInMPH * 1.60934
+        return speedInKPH as Double
+    }
+    
+    func kilometersToMiles(speedInMPH:Double) ->Double {
+        let speedInKPH = speedInMPH / 1.60934
         return speedInKPH as Double
     }
     
